@@ -1,0 +1,42 @@
+<form [formGroup]="entityForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>ID Number</mat-label>
+      <input matInput formControlName="idNumber" placeholder="Enter ID Number">
+      <mat-error *ngIf="entityForm.get('idNumber')?.hasError('required')">
+        ID Number is required
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Entity Name</mat-label>
+      <input matInput formControlName="entityName" placeholder="Enter Entity Name">
+      <mat-error *ngIf="entityForm.get('entityName')?.hasError('required')">
+        Entity Name is required
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Location</mat-label>
+      <input matInput formControlName="location" placeholder="Enter Location">
+      <mat-error *ngIf="entityForm.get('location')?.hasError('required')">
+        Location is required
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="phoneNumber" placeholder="Enter Phone Number">
+      <mat-error *ngIf="entityForm.get('phoneNumber')?.hasError('required')">
+        Phone Number is required
+      </mat-error>
+      <mat-error *ngIf="entityForm.get('phoneNumber')?.hasError('pattern')">
+        Phone Number must be numeric
+      </mat-error>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit" [disabled]="entityForm.invalid">
+      Submit
+    </button>
+  </form>
+  
+  

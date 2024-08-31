@@ -1,0 +1,1 @@
+<app-authentication-form [errors]="errores" title="Login" (postForm)="save($event)"></app-authentication-form>

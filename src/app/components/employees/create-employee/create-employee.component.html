@@ -1,0 +1,34 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Identification Type</mat-label>
+      <input matInput type="number" formControlName="identificationType" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Position ID</mat-label>
+      <input matInput type="number" formControlName="positionId" required>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Identification Number</mat-label>
+      <input matInput type="text" formControlName="identificationNumber" required maxlength="20">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Full Name</mat-label>
+      <input matInput type="text" formControlName="fullName" required maxlength="100">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput type="text" formControlName="phoneNumber" required pattern="^[0-9]*$">
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+  

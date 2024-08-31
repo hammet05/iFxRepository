@@ -1,0 +1,24 @@
+export function extractErrors(obj: any): string[]{
+    const err = obj.error.errors;
+
+    let messagesErrors: string[] = [];
+
+    for (let key in err){
+        let field = key;
+        const messageField = err[key].map((message: string) => `${field}: ${message}`);
+        messagesErrors = messagesErrors.concat(messageField);
+    }
+
+    return messagesErrors;
+}
+
+export function extractErrorsIdentity(obj: any): string[]{
+    let messagesErrors: string[] = [];
+
+    for (let i = 0; i < obj.error.length; i++) {
+        const elemento = obj.error[i];
+        messagesErrors.push(elemento.description);        
+    }
+
+    return messagesErrors;
+}

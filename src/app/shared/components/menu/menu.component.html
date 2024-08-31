@@ -1,0 +1,34 @@
+<mat-toolbar>
+    <!-- <img src="https://ifxnetworks.com/hubfs/IFX/logo-ifx--primary.svg" alt="Logo IFX" loading="eager" width="75" height="70" style="max-width: 100%; width: auto; height: 70;" srcset="" sizes="" alt=""> -->
+    <span>
+        <a routerLink="" mat-button>
+            <mat-icon>timeline</mat-icon> iFx-Manager Colombia
+        </a>
+    </span>
+    <div>
+        <a mat-button routerLink="entities">Entities</a>
+    </div>
+
+    <div>
+        <a mat-button routerLink="employees">Employees</a>
+    </div>
+    <div>
+        <a mat-button routerLink="login">Login</a>
+    </div>
+    <div>
+        <a mat-button routerLink="register">Register</a>
+    </div>
+
+    <app-authorized-form rol="admin">
+        <ng-container authorized >
+            <div>
+                <a mat-button routerLink="createEntity">Create Entity</a>
+            </div>
+        
+            <div>
+                <a mat-button routerLink="createEmployee">Create Employee</a>
+            </div>
+        </ng-container>
+    </app-authorized-form>
+
+</mat-toolbar>

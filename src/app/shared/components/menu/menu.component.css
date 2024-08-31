@@ -1,0 +1,11 @@
+
+mat-toolbar{
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 500;
+}
+app-authorized-form{
+    display: flex;
+}
